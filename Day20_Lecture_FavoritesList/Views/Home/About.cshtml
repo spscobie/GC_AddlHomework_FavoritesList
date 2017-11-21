@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information</p>
+<table class="table">
+    <tr>
+        <th>Hellbent for Leather</th>
+        <th><a href="/Home/AddToFavsList?Name=Hellbent for Leather">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Go</th>
+        <th><a href="/Home/AddToFavsList?Name=Go">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Sink-O</th>
+        <th><a href="/Home/AddToFavsList?Name=Sink-O">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Kaleidoscope</th>
+        <th><a href="/Home/AddToFavsList?Name=Kaleidoscope">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Every Planet We Reach is Dead</th>
+        <th><a href="/Home/AddToFavsList?Name=Every Planet We Reach is Dead">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Zombie</th>
+        <th><a href="/Home/AddToFavsList?Name=Zombie">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Rite of the Ancients</th>
+        <th><a href="/Home/AddToFavsList?Name=Rite of the Ancients">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>The Conquerer</th>
+        <th><a href="/Home/AddToFavsList?Name=The Conquerer">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>30th Century Man</th>
+        <th><a href="/Home/AddToFavsList?Name=30th Century Man">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Monday Morning</th>
+        <th><a href="/Home/AddToFavsList?Name=Monday Morning">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Sugar Never Tasted So Good</th>
+        <th><a href="/Home/AddToFavsList?Name=Sugar Never Tasted So Good">Add to Favorites</a></th>
+    </tr>
+    <tr>
+        <th>Counting Backwards</th>
+        <th><a href="/Home/AddToFavsList?Name=Counting Backwards">Add to Favorites</a></th>
+    </tr>
+</table>
+
+<!-- The data from the session (adding favorites) comes back to this point -->
+@if (ViewBag.FavList != null)
+{
+    <h3>Favorite List: </h3><br />
+    <table>
+        @foreach (var song in ViewBag.FavList)
+        {
+            <tr> <th> @song</th></tr>
+        }
+    </table>
+}
